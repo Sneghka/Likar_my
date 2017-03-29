@@ -151,9 +151,28 @@ figure.tab-image-right img {
     opacity: 0.8;
     display: none;
 }
+.vertical-menu-tab.doctor {
+    transform: rotate(0deg);
+    transform: translateX(-50%);
+    left: 50%;
+    background: red;
+    color: #FFF;
+    font-size: 16px;
+    padding: 10px 10px;
+    opacity: 0.5;
+    position: relative;
+}
+
+.button-wrapper.doctor {
+    position: relative;
+    padding: 5px;
+}
+.button-wrapper.doctor:after {
+    content: " ";
+}
 
 nav.left-menu,
-section.news {
+section.news,.mobile.right-menu {
     background: #f1f6fc;
     font-size: 16px;
     padding: 30px 20px;
@@ -244,7 +263,7 @@ section.news .slogan {
 
 @media (max-width: 767px) {
     .content.item div.thumb-box3 {
-        padding: 20px 0;
+        padding: 0;
     }
     .column-level.video {
         margin-top: 30px;
@@ -284,10 +303,24 @@ section.news .slogan {
         z-index: 3000;
         left: 50%;
         transform: translate(-50%, -50%);
+            color: #444;
+      
     }
+    #close-right-menu {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: #53afee;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+}
+    .vertical-menu-tab.doctor {
+     display: block;
+}
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) {    
     .container.column-level>div>div:nth-child(2) {
         padding-top: 20px;
     }
