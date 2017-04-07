@@ -9,8 +9,8 @@
             $(this).parent().siblings().find("p").slideUp();
             $(this).attr("class", "color1 color2");
             $(this).next().slideDown();
-
         });
+
         $(window).scroll(function () {
             var heigthFromTop = $(window).scrollTop();
             var windowHeight = window.innerHeight;
@@ -83,7 +83,7 @@
                     $(this).height(tallest)
                 })
             }
-        })(jQuery)
+        })(jQuery);
 
 
         $("button.vertical-menu-tab.options").click(function () {
@@ -96,7 +96,7 @@
             $("button.vertical-menu-tab.options").removeClass("hide");
 
         });
-         $("button.vertical-menu-tab.doctor").click(function () {
+        $("button.vertical-menu-tab.doctor").click(function () {
             $('#mobile-right-menu').addClass("show");
             $(this).addClass("hide");
             $("button.vertical-menu-tab.options").addClass("hide");
@@ -109,24 +109,39 @@
 
         });
 
-/***Responsive tad in MSSiteModeEvent.html****/
-$(".tab-responsive-heading").click(function(){
-         $(".menu-tab").removeClass("active");
-         $("li[rel^='menu']").removeClass("active");
-     $(".menu-tab").removeClass("in");
-    
+        /***News html - make all images the same height****/
+        var maxHeight = -1;
+        $(".news .thumbnail figure").each(function () {
+            maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
+        });
 
-     var d_activeTab = $(this).attr("rel");
-     $("li[rel= " + d_activeTab +"]").addClass("active");
-      $("#"+d_activeTab).addClass("in");
-      $("#"+d_activeTab).addClass("active");
-     
-
-     $(".tab-responsive-heading").removeClass("active");
-           $(this).addClass("active");
+        $('.news .thumbnail figure').each(function () {
+            $(this).height(maxHeight);
+        });
+        $('.news img[src*="news_img"]').each(function () {
+            $(this).height(100 + '%');
+            $(this).css("width", "auto");
+        });
 
 
-});
+        /***Responsive tad in MSSiteModeEvent.html****/
+        $(".tab-responsive-heading").click(function () {
+            $(".menu-tab").removeClass("active");
+            $("li[rel^='menu']").removeClass("active");
+            $(".menu-tab").removeClass("in");
+
+
+            var d_activeTab = $(this).attr("rel");
+            $("li[rel= " + d_activeTab + "]").addClass("active");
+            $("#" + d_activeTab).addClass("in");
+            $("#" + d_activeTab).addClass("active");
+
+
+            $(".tab-responsive-heading").removeClass("active");
+            $(this).addClass("active");
+
+
+        });
 
 
 

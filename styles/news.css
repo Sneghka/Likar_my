@@ -1,15 +1,18 @@
-
 .content.indent {
     padding: 20px 20px;
 }
+
 .news .breadcrumb {
     margin-bottom: 60px;
 }
+
 .thumb-news-pad {
     margin: 0 0 40px 0;
     overflow: hidden;
     text-align: left;
+    padding-bottom: 5px;
 }
+
 .thumb-news-pad .thumbnail {
     position: relative;
     margin: 0;
@@ -19,47 +22,96 @@
     padding: 0;
     background: none;
 }
+
 .news .thumbnail figure {
     max-width: 50%;
     float: left;
     margin: 0 30px 0 0;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    border: 1px solid #c5d8da;
+    /*padding: 15px;*/
+    overflow: hidden;
 }
+
 .news .thumbnail figure img {
     border: 0 none;
     height: auto;
-    max-width: 100%;
+    width: 100%;
     vertical-align: middle;
 }
 
 .thumb-news-pad .thumbnail .caption {
-       padding: 0;
+    padding: 0;
     overflow: hidden;
 }
 
-.item-news  figure.news-img {
+.item-news ul {
+    list-style: none;
+}
+.item-news figure.news-img {
     margin-bottom: 40px;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
     margin-top: 30px;
     padding: 30px;
     text-align: left;
 }
+
 .item-news figure img {
     width: 100%;
 }
+
 .item-news h3 {
-   font: bold 36px/36px 'Roboto Condensed';
+    font: bold 36px/36px 'Roboto Condensed';
     text-transform: uppercase;
     margin: 20px 0 42px 0;
     color: #414141;
     text-align: center;
-
+    
 }
+.item-news h5{
+    font: bold 20px/20px 'Roboto Condensed';
+    text-transform: uppercase;
+    /*margin: 20px 0 42px 0;*/
+    color: #414141;
+    text-align: center;
+    font-weight: 600 !important;
+}
+
 .item-news .full-news-text p {
     color: #000;
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.8em;
+    text-indent: 25px;
 }
 
 .item-news .content.indent {
-        padding-bottom: 60px;
+    padding-bottom: 60px;
 }
 
+.item-news-img-right,
+.item-news-img-left {
+    float: left;
+    width: 50%;
+    min-width: 200px;
+    padding: 15px;
+    margin-right: 20px;
+}
+
+
+.item-news-img-right img,
+.item-news-img-left img {
+    width: 100%;
+}
+.item-news-img-right {
+    float: right;
+    width: 35%;
+    
+}
+@media (min-width:1700px){
+
+}
+@media (max-width: 600px) {
+    .news .thumbnail figure {
+        display: none;
+    }
+}
