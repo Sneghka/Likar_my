@@ -139,10 +139,15 @@ header {
     z-index: 11;
     background: #ffffff;
 }
-
-header img {
+.logo-wrapper{
+    overflow: hidden;
     float: left;
-    background: white;
+    max-width: 220px;
+}
+header img {
+    padding: 10px 0;
+    float: left;
+    width: 100%;
 }
 
 nav {
@@ -177,6 +182,8 @@ nav {
     float: left;
     list-style: none;
     margin: 0 15px 0 2%;
+    position: relative;
+    top: 25px;
 }
 
 .main-menu li {
@@ -190,7 +197,7 @@ nav {
 .main-menu li a {
     position: relative;
     padding: 0;
-    font: 15px 'Roboto Condensed';
+    font: 20px 'Roboto Condensed';
     color: #ffffff;
     text-transform: uppercase;
     background: none;
@@ -199,7 +206,7 @@ nav {
     transition: all 0.25s;
 }
 
-.main-menu li.active > a {
+.main-menu li.active>a {
     color: #a0d7fe;
     background: none;
 }
@@ -208,7 +215,7 @@ nav {
 /*subMenu1
 =======================================================================*/
 
-div.nav-wrapper .sub-menu > ul {
+div.nav-wrapper .sub-menu>ul {
     position: absolute;
     display: none;
     width: 110px;
@@ -225,7 +232,7 @@ div.nav-wrapper .sub-menu > ul {
     transition: display 2s;
 }
 
-div.nav-wrapper .sub-menu > ul li {
+div.nav-wrapper .sub-menu>ul li {
     background: none;
     border: none;
     width: auto;
@@ -236,7 +243,7 @@ div.nav-wrapper .sub-menu > ul li {
     display: block;
 }
 
-div.nav-wrapper .sub-menu > ul li a {
+div.nav-wrapper .sub-menu>ul li a {
     background: none;
     padding: 0;
     margin: 0;
@@ -249,7 +256,7 @@ div.nav-wrapper .sub-menu > ul li a {
     transition: all 0.25s;
 }
 
-div.nav-wrapper .sub-menu > ul li span {
+div.nav-wrapper .sub-menu>ul li span {
     display: inline-block;
     position: absolute;
     right: 10px;
@@ -261,7 +268,7 @@ div.nav-wrapper .sub-menu > ul li span {
     background: none;
 }
 
-div.nav-wrapper .sub-menu > ul li a:hover {
+div.nav-wrapper .sub-menu>ul li a:hover {
     text-decoration: none;
     color: #414141 !important;
     background: none !important;
@@ -303,7 +310,7 @@ div.nav-wrapper .sub-menu ul ul li a {
     transition: all 0.25s;
 }
 
-div.nav-wrapper .sub-menu > ul li > ul li a:hover {
+div.nav-wrapper .sub-menu>ul li>ul li a:hover {
     text-decoration: none;
     color: #53afee !important;
     background: none !important;
@@ -327,7 +334,7 @@ ul.main-menu li span {
     transition: all 0.25s;
 }
 
-div.nav-wrapper .sub-menu > ul li > ul li a:hover {
+div.nav-wrapper .sub-menu>ul li>ul li a:hover {
     text-decoration: none;
     color: #53afee;
     background: none;
@@ -336,6 +343,7 @@ div.nav-wrapper .sub-menu > ul li > ul li a:hover {
 #search {
     float: right;
     position: relative;
+    top: 25px;
 }
 
 #search input {
@@ -360,7 +368,7 @@ div.nav-wrapper .sub-menu > ul li > ul li a:hover {
 #search a {
     display: inline-block;
     position: absolute;
-    top: 23px;
+    top: 13px;
     right: 14px;
     -webkit-transition: all 0.25s;
     -o-transition: all 0.25s;
@@ -534,7 +542,7 @@ div.nav-wrapper .sub-menu > ul li > ul li a:hover {
     padding-bottom: 28px;
 }
 
-._accodList > li {
+._accodList>li {
     padding-bottom: 0;
     margin-bottom: -1px;
     width: 100%;
@@ -543,7 +551,7 @@ div.nav-wrapper .sub-menu > ul li > ul li a:hover {
     line-height: 50px;
 }
 
-._accodList > li strong {
+._accodList>li strong {
     margin: 0;
     float: none;
     display: block;
@@ -563,15 +571,15 @@ div.nav-wrapper .sub-menu > ul li > ul li a:hover {
     transition: all 0.25s;
 }
 
-._accodList > li strong.color1 {
+._accodList>li strong.color1 {
     color: #878787;
 }
 
-._accodList > li strong.color2 {
+._accodList>li strong.color2 {
     color: #53afee;
 }
 
-._accodList > li span {
+._accodList>li span {
     width: 16px;
     height: 16px;
     overflow: hidden;
@@ -586,7 +594,7 @@ div.nav-wrapper .sub-menu > ul li > ul li a:hover {
     transition: all 0.25s;
 }
 
-._accodList > li strong.color2 span {
+._accodList>li strong.color2 span {
     background: url(../img/plus.png) 0 bottom no-repeat;
 }
 
@@ -601,7 +609,7 @@ div.nav-wrapper .sub-menu > ul li > ul li a:hover {
     background: url(../img/plus.png) 0 bottom no-repeat;
 }
 
-._accodList > li p {
+._accodList>li p {
     margin: 0;
     font: 13px 'Ubuntu', "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 18px;
@@ -766,7 +774,7 @@ footer .title {
 }
 
 footer .name {
-    font: 36px 'Pacifico';
+    font: bold 36px 'Roboto Condensed';
     color: #ffffff;
     margin-bottom: 0;
 }
@@ -801,8 +809,8 @@ footer .prev a {
 }
 
 .follow_icon2 li a {
-    font-size: 23px;
-    line-height: 25px;
+    font-size: 30px;
+    line-height: 30px;
     color: #ffffff;
     -webkit-transition: all 0.25s;
     -o-transition: all 0.25s;
@@ -839,15 +847,31 @@ footer p {
 =======================================================================*/
 
 @media only screen and (max-width: 1200px) {
-    header img,
+    .logo-wrapper, header img,
     .main-menu,
     #search {
         float: none;
         display: inline-block;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
+    }
+    header img {
+        margin-bottom: 10px;
+    }
+    .logo-wrapper{      
+            max-width: 280px;
+              width: 50%;
+              margin-bottom: 0;
+    }
+    .main-menu {
+        top: 0;
     }
     #search {
         margin-bottom: 0;
+        top: 0;
+    }
+    #search img {
+        position: relative;
+        top: -10px;
     }
     nav {
         text-align: center;
@@ -887,6 +911,7 @@ footer p {
     }
     .select-menu {
         display: inline-block;
+        margin-top: 0;
     }
     #search {
         float: none;
@@ -931,13 +956,14 @@ footer p {
         float: none;
     }
 }
+
 @media (max-width: 320px) {
- .col-xs-4 {
- width: 100%;
- float: none;
-}
- .col-xs-6 {
- width: 100%;
- float: none;
-}
+    .col-xs-4 {
+        width: 100%;
+        float: none;
+    }
+    .col-xs-6 {
+        width: 100%;
+        float: none;
+    }
 }

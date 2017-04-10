@@ -23,7 +23,7 @@
 
 .item .left-menu ol,
 nav.mobile ol {
-     list-style: none;    
+    list-style: none;
     font: 15px 'trebuchet MS', 'lucida sans';
     padding: 0;
     margin-bottom: 4em;
@@ -133,7 +133,8 @@ figure.tab-image-right img {
     position: relative;
 }
 
-.item .vertical-menu-tab, .vertical-menu-tab.doctor {
+.item .vertical-menu-tab,
+.vertical-menu-tab.doctor {
     background: #53afee;
     z-index: 1000;
     transform: rotate(90deg);
@@ -144,17 +145,18 @@ figure.tab-image-right img {
     cursor: pointer;
     -webkit-appearance: none;
     position: absolute;
-    top: 10%;
+    top: -15%;
     left: 86%;
     text-align: center;
     color: #000;
     opacity: 0.8;
     display: none;
 }
+
 .vertical-menu-tab.doctor {
     transform: rotate(0deg);
-    transform: translateX(-50%);
-    left: 50%;
+    /*transform: translateX(-50%);
+    left: 50%;*/
     background: red;
     color: #FFF;
     font-size: 16px;
@@ -164,15 +166,21 @@ figure.tab-image-right img {
 }
 
 .button-wrapper.doctor {
-    position: relative;
-    padding: 5px;
+    transform: rotate(90deg);
+    z-index: 1000;
+    top: 55%;
+    /*bottom: 35%;*/
+    left: -50px;
+    position: fixed;
 }
+
 .button-wrapper.doctor:after {
     content: " ";
 }
 
 nav.left-menu,
-section.news,.mobile.right-menu {
+section.news,
+.mobile.right-menu {
     background: #f1f6fc;
     font-size: 16px;
     padding: 30px 20px;
@@ -198,7 +206,8 @@ section.news,.mobile.right-menu {
     padding-top: 20px;
 }
 
-.tab-responsive-heading, .tab-responsive-heading.active {
+.tab-responsive-heading,
+.tab-responsive-heading.active {
     display: none;
 }
 
@@ -218,11 +227,15 @@ section.news .slogan {
 
 /***********MOBILE*********************/
 
-.mobile.left-menu, .mobile.right-menu {
+.mobile.left-menu,
+.mobile.right-menu {
     display: none;
 }
+.mobile.right-menu form label {
+    font: 18px 'trebuchet MS', 'lucida sans';
+}
 
-#close-left-menu  {
+#close-left-menu {
     position: absolute;
     top: 10px;
     right: 15px;
@@ -275,7 +288,6 @@ section.news .slogan {
         position: fixed;
         z-index: 2000;
     }
-     
     .item .vertical-menu-tab {
         display: inline-block;
     }
@@ -293,7 +305,8 @@ section.news .slogan {
         left: 50%;
         transform: translate(-50%, -50%);
     }
-     .mobile.right-menu {
+    .mobile.right-menu {
+        background: #fbe2e2;
         position: fixed;
         width: 80%;
         max-height: 100%;
@@ -303,24 +316,23 @@ section.news .slogan {
         z-index: 3000;
         left: 50%;
         transform: translate(-50%, -50%);
-            color: #444;
-      
+        color: #444;
     }
     #close-right-menu {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    background: #53afee;
-    width: 20px;
-    height: 20px;
-    color: #fff;
-}
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #f50606;
+        width: 20px;
+        height: 20px;
+        color: #fff;
+    }
     .vertical-menu-tab.doctor {
-     display: block;
-}
+        display: block;
+    }
 }
 
-@media (max-width: 480px) {    
+@media (max-width: 480px) {
     .container.column-level>div>div:nth-child(2) {
         padding-top: 20px;
     }
@@ -335,10 +347,10 @@ section.news .slogan {
         background: linear-gradient(to bottom, #93bcdb 1%, #a7cfdf 50%, #93bcdb 100%);
         color: #fff;
         /*border-top: 1px solid #333;*/
-        -webkit-box-shadow: 5px 5px 5px  #2A6096;
+        -webkit-box-shadow: 5px 5px 5px #2A6096;
         box-shadow: 3px 5px 5px #9ea4ab;
-            width: 95%;
-    margin: 0 auto 8px;
+        width: 95%;
+        margin: 0 auto 8px;
         padding: 10px 20px;
         display: block;
         cursor: pointer;

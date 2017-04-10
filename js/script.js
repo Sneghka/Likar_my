@@ -89,11 +89,13 @@
         $("button.vertical-menu-tab.options").click(function () {
             $('#mobile-left-menu').addClass("show");
             $(this).addClass("hide");
+            $('button.vertical-menu-tab.doctor').addClass("hide");
         });
 
         $("#close-left-menu").click(function () {
             $("#mobile-left-menu").removeClass("show");
             $("button.vertical-menu-tab.options").removeClass("hide");
+            $('button.vertical-menu-tab.doctor').removeClass("hide");
 
         });
         $("button.vertical-menu-tab.doctor").click(function () {
