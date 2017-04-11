@@ -1,3 +1,8 @@
+.item aside {
+    margin: 0;
+    padding: 0;
+}
+
 .item .container {
     margin: 0;
     width: 100%;
@@ -19,6 +24,10 @@
 
 .item ul li {
     list-style-type: none;
+}
+
+.item .nav.nav-tabs>li>a {
+    font-size: 16px;
 }
 
 .item .left-menu ol,
@@ -180,10 +189,28 @@ figure.tab-image-right img {
 
 nav.left-menu,
 section.news,
-.mobile.right-menu {
+.mobile.right-menu,
+.go-doctor {
     background: #f1f6fc;
     font-size: 16px;
     padding: 30px 20px;
+}
+
+section.go-doctor {
+    margin-top: 40px;
+    background: #fbe2e2;
+    text-align: center;
+    
+}
+section.go-doctor label{
+    
+    font: 18px 'trebuchet MS', 'lucida sans';
+    color: #444;
+}
+section.go-doctor button{
+    
+    font: 18px 'trebuchet MS', 'lucida sans';
+   
 }
 
 .left-menu li {
@@ -195,7 +222,7 @@ section.news,
 }
 
 .content.item .thumb-box3 {
-    padding: 0 60px;
+    padding: 0 30px;
 }
 
 .item-tabs {
@@ -231,6 +258,7 @@ section.news .slogan {
 .mobile.right-menu {
     display: none;
 }
+
 .mobile.right-menu form label {
     font: 18px 'trebuchet MS', 'lucida sans';
 }
@@ -268,13 +296,10 @@ section.news .slogan {
     }
 }
 
-@media (min-width: 992px) {
-    .content.item .thumb-box3 {
-        padding: 0 30px;
-    }
-}
-
 @media (max-width: 767px) {
+    .go-doctor {
+        display: none;
+    }
     .content.item div.thumb-box3 {
         padding: 0;
     }
@@ -308,7 +333,7 @@ section.news .slogan {
     .mobile.right-menu {
         background: #fbe2e2;
         position: fixed;
-        width: 80%;
+        max-width: 80%;
         max-height: 100%;
         overflow-y: scroll;
         margin: 0 auto;

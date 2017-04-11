@@ -183,7 +183,7 @@ nav {
     list-style: none;
     margin: 0 15px 0 2%;
     position: relative;
-    top: 25px;
+    top: 15px;
 }
 
 .main-menu li {
@@ -664,7 +664,8 @@ div.nav-wrapper .sub-menu>ul li>ul li a:hover {
     font: 14px/18px 'Roboto Condensed';
     height: 244px;
     color: #8c8c8c;
-    padding: 14px 28px resize: none;
+    padding: 14px 28px;
+     resize: none;
 }
 
 #contact-form .form-div-4 {
@@ -890,6 +891,12 @@ footer p {
     }
     ul.main-menu li span {
         top: 25px;
+    }
+}
+
+@media only screen and (max-width: 1260px) {
+   .main-menu li {
+        margin-left: 36px;
     }
 }
 

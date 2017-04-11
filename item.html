@@ -30,7 +30,9 @@
     <header class="clearfix">
         <nav class="clearfix">
             <div class="nav-wrapper">
-                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                <div class="logo-wrapper">
+                    <a href="index.html"><img src="img/logo_zir.png" alt="logo"></a>
+                </div>
                 <!--<div class="header-menu-wrapper">-->
                 <ul class="main-menu clearfix sf-menu sf-js-enabled sf-arrows">
                     <li class="active"><a href="index.html">HOME</a>
@@ -39,12 +41,17 @@
                         <span></span>
                         <ul class="submenu sub-menu">
                             <li><a href="#">history</a></li>
-                            <li><a href="news.html" class="sf-with-ul">news</a>                               
+                            <li><a href="news.html" class="sf-with-ul">news</a>
+                                <!--<span class="fa fa-angle-right"></span>-->
+                                <!--<ul class="submenu sub-menu">
+                                    <li><a href="#">latest</a></li>
+                                    <li><a href="#">archive</a></li>
+                                </ul>-->
                             </li>
                             <li><a href="#">testimonials</a></li>
                         </ul>
                     </li>
-                    <li><a href="">eye care</a></li>
+                    <li><a href="item.html">eye care</a></li>
                     <li><a href="">eyewear products</a></li>
                     <li><a href="">contacts</a></li>
                 </ul>
@@ -57,7 +64,7 @@
                     <option value="#">–––latest</option>
                     <option value="#">–––archive</option>
                     <option value="#">––testimonials</option>
-                    <option value="#">eye care</option>
+                    <option value="item.html">eye care</option>
                     <option value="#">Eyewear products</option>
                     <option value="#">Contacts</option>
                 </select>
@@ -73,7 +80,8 @@
             </div>
         </nav>
     </header>
-      <nav class="mobile left-menu  col-lg-2 col-md-3 col-sm-3 columns" id="mobile-left-menu">
+
+    <nav class="mobile left-menu  col-lg-2 col-md-3 col-sm-3 columns" id="mobile-left-menu">
         <div id="close-left-menu">&#x274C</div>
         <h3>Аппараты</h3>
         <ol>
@@ -100,15 +108,15 @@
         <form action="">
             <div class="form-group">
                 <label for="username">Ваше имя:</label>
-                <input type="text" class="form-control" id="username">
+                <input type="text" class="form-control" id="username-mobile">
             </div>
             <div class="form-group">
-                <label for="email">Email address:</label>
-                <input type="email" class="form-control" id="email">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email-mobile">
             </div>
             <div class="form-group">
                 <label for="phone">Телефон:</label>
-                <input type="text" class="form-control" id="phone">
+                <input type="text" class="form-control" id="phone-mobile">
             </div>
             <button type="submit" class="btn btn-danger">Записаться</button>
         </form>
@@ -127,13 +135,12 @@
                 </ol>
             </div>
             <div class="button-wrapper doctor">
-                <button class="vertical-menu-tab doctor">Запись на приём</button>               
+                <button class="vertical-menu-tab doctor">Запись на приём</button>
             </div>
-
-
             <div class="inner-wrapper container">
                 <div class="row">
-                    <nav class="desctop left-menu  col-lg-2 col-md-3 col-sm-3 columns">
+                    <aside class="col-lg-2 col-md-3 col-sm-4 columns">
+                         <nav class="desctop left-menu">
                         <button class="vertical-menu-tab options">Аппараты</button>
                         <h3>Аппараты</h3>
                         <ol>
@@ -143,11 +150,32 @@
                             <li><a href="">Синоптофор</a></li>
                             <li><a href="">Визулон</a></li>
                         </ol>
-                    </nav>
-                    <div class="thumb-box3 col-lg-7 col-md-9 col-sm-9 columns">
+                        </nav>
+                        <section class="go-doctor">
+                            <h3>Запись на приём</h3>
+                            <form action="">
+                                <div class="form-group">
+                                    <label for="username">Ваше имя:</label>
+                                    <input type="text" class="form-control" id="username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Телефон:</label>
+                                    <input type="text" class="form-control" id="phone">
+                                </div>
+                                <button type="submit" class="btn btn-danger">Записаться</button>
+                            </form>
+                        </section>
+                    
+                    </aside>
+                   
+                    <div class="thumb-box3 col-lg-7 col-md-9 col-sm-8 columns">
                         <div class="container column-level">
                             <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 wow fadeInUp">
+                                <div class="col-lg-4 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-6 wow fadeInUp">
                                     <div class="thumb-pad2">
                                         <div class="thumbnail">
                                             <figure><img src="img/page1_pic1.jpg" alt=""></figure>
@@ -158,7 +186,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-8 col-md-8 col-sm-8 wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="col-lg-8 col-md-8 col-sm-12 wow fadeInUp" data-wow-delay="0.2s">
                                     <h3>Pellentesque ultrices quam dui, et consequat justo pharetra ac.</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sapien purus, volutpat
                                         non quam non, consectetur cursus nibh. Maecenas eleifend lorem et dolor accumsan
@@ -169,7 +197,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="item-tabs column-level">
+                        <div class="container item-tabs column-level">
                             <ul class="nav nav-tabs">
                                 <li class="active" rel="menu1"><a data-toggle="tab" href="#menu1">Menu sdfsdfasfsdf</a></li>
                                 <li rel="menu2"><a data-toggle="tab" href="#menu2">Menu 2</a></li>
@@ -208,7 +236,7 @@
                                         quaeso, nesciebat? Comprehensum, quod cognitum non habet? Honesta oratio, Socratica,
                                         Platonis etiam. Dat enim intervalla et relaxat.</p>
                                 </div>
-                                <h3 class="tab-responsive-heading" rel="menu3">Menu 3</h3>
+                                <h3 class="tab-responsive-heading" rel="menu3" id="tab-menu3">Menu 3</h3>
                                 <div id="menu3" class="menu-tab tab-pane fade">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Recte dicis; Apparet statim,
                                         quae sint officia, quae actiones. Duo Reges: constructio interrete. Certe nihil nisi

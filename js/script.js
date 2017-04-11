@@ -33,18 +33,18 @@
         $(function () {
             $(".maxheight").each(function () {
                 $(this).contents().wrapAll("<div class='box_inner'></div>");
-            })
+            });
             $(".maxheight2").each(function () {
                 $(this).contents().wrapAll("<div class='box_inner'></div>");
-            })
+            });
             $(".maxheight3").each(function () {
                 $(this).contents().wrapAll("<div class='box_inner'></div>");
-            })
+            });
 
 
-        })
+        });
         /*add event*/
-        $(window).bind("resize", height_handler).bind("load", height_handler)
+        $(window).bind("resize", height_handler).bind("load", height_handler);
 
         function height_handler() {
             if ($(window).width() > 465) {
@@ -65,6 +65,7 @@
 
             if ($(window).width() > 767) {
                 $("#mobile-left-menu").removeClass("show");
+                 $("#mobile-right-menu").removeClass("show");
                 $(".vertical-menu-tab").removeClass("hide");
             }
 
@@ -75,14 +76,14 @@
                 tallest = (minHeight) ? minHeight : 0;
                 this.each(function () {
                     if ($(">.box_inner", this).outerHeight() > tallest) {
-                        tallest = $(">.box_inner", this).outerHeight()
+                        tallest = $(">.box_inner", this).outerHeight();
                     }
                 });
                 if ((maxHeight) && tallest > maxHeight) tallest = maxHeight;
                 return this.each(function () {
-                    $(this).height(tallest)
-                })
-            }
+                    $(this).height(tallest);
+                });
+            };
         })(jQuery);
 
 
@@ -126,7 +127,7 @@
         });
 
 
-        /***Responsive tad in MSSiteModeEvent.html****/
+        /***Responsive tab in mobile item.html****/
         $(".tab-responsive-heading").click(function () {
             $(".menu-tab").removeClass("active");
             $("li[rel^='menu']").removeClass("active");
@@ -138,13 +139,11 @@
             $("#" + d_activeTab).addClass("in");
             $("#" + d_activeTab).addClass("active");
 
-
             $(".tab-responsive-heading").removeClass("active");
-            $(this).addClass("active");
 
+            $(this).addClass("active");
+            var scrollToTab = $(this).offset().top - 20;
+            $('html,body').animate({scrollTop: scrollToTab}, 2);
 
         });
-
-
-
     });

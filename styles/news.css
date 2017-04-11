@@ -107,7 +107,14 @@
     width: 35%;
     
 }
+
+.item-news ul {
+    margin-top: 20px;
+}
 @media (min-width:1700px){
+    .container{
+        width: 1400px;
+    }
 
 }
 @media (max-width: 600px) {
