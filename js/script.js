@@ -87,12 +87,12 @@
         })(jQuery);
 
         // **********Toggle language***********
-        $(".lang-wrapper button").click(function () {
-            $(".lang-wrapper button").each(function () {
-                $(this).removeClass("active")
-            });
-            $(this).addClass("active");
-        });
+        // $(".lang-wrapper button").click(function () {
+        //     $(".lang-wrapper button").each(function () {
+        //         $(this).removeClass("active")
+        //     });
+        //     $(this).addClass("active");
+        // });
 
 
         // ******hide/show left mobile menu******
@@ -119,6 +119,13 @@
             $("button.vertical-menu-tab.doctor").removeClass("hide");
             $("button.vertical-menu-tab.options").removeClass("hide");
 
+        });
+ // ******hide/show desctop go-doctor menu******
+  $("#close-popup-go-doctor").click(function () {
+            $(".popup-doctor").addClass("hide");      
+        });
+   $("button.go-doctor").click(function () {
+            $(".popup-doctor").removeClass("hide");      
         });
 
         /***News html - make all images the same height****/

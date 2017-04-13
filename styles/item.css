@@ -252,6 +252,47 @@ section.news .slogan {
     text-align: center;
 }
 
+/***********POPUP GO-DOCTOR*********************/
+button.go-doctor {
+    background: #d9534f;
+    color: #fff;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 60px;
+}
+.popup-doctor {   
+       z-index: 10000;    
+}
+.popup-doctor-background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: grey;
+    opacity: 0.5;
+    z-index: 10000; 
+}
+section.go-doctor {
+    width: 350px;
+    background: #fbe2e2;
+    text-align: center;
+    position: fixed;
+    z-index: 11000;
+     -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        top: 100px;
+        left: 50%;
+}
+#close-popup-go-doctor{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top:5px;
+    right: 5px;
+    color: #fff;
+    background: #ff0000;
+
+}
 
 /***********MOBILE*********************/
 

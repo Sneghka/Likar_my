@@ -27,7 +27,7 @@
 
 
 <body>
-    <header class="clearfix">
+       <header class="clearfix">
         <nav class="clearfix">
             <div class="nav-wrapper">
                 <div class="logo-wrapper">
@@ -80,6 +80,29 @@
             </div>
         </nav>
     </header>
+    
+     <div class="popup-doctor hide">
+            <div class="popup-doctor-background "></div>
+            <section class="go-doctor">
+                <div id="close-popup-go-doctor">&#x274C</div>
+                            <h3>Запись на приём</h3>
+                            <form action="">
+                                <div class="form-group">
+                                    <label for="username">Ваше имя:</label>
+                                    <input type="text" class="form-control" id="username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Телефон:</label>
+                                    <input type="text" class="form-control" id="phone">
+                                </div>
+                                <button type="submit" class="btn btn-danger">Записаться</button>
+                            </form>
+                        </section>
+        </div>
 
     <nav class="mobile left-menu  col-lg-2 col-md-3 col-sm-3 columns" id="mobile-left-menu">
         <div id="close-left-menu">&#x274C</div>
@@ -122,9 +145,8 @@
         </form>
     </nav>
 
-
-
     <div class="content item">
+       
         <div class="main-wrapper">
             <div class="breadcrumbs">
                 <ol class="breadcrumb">
@@ -140,18 +162,19 @@
             <div class="inner-wrapper container">
                 <div class="row">
                     <aside class="col-lg-2 col-md-3 col-sm-4 columns">
-                         <nav class="desctop left-menu">
-                        <button class="vertical-menu-tab options">Аппараты</button>
-                        <h3>Аппараты</h3>
-                        <ol>
-                            <li><a href="">Светомаг Синоптофор</a></li>
-                            <li><a href="">Виртус</a></li>
-                            <li><a href="">Алмедис</a></li>
-                            <li><a href="">Синоптофор</a></li>
-                            <li><a href="">Визулон</a></li>
-                        </ol>
+                        <nav class="desctop left-menu">
+                            <button class="vertical-menu-tab options">Аппараты</button>
+                            <h3>Аппараты</h3>
+                            <ol>
+                                <li><a href="">Светомаг Синоптофор</a></li>
+                                <li><a href="">Виртус</a></li>
+                                <li><a href="">Алмедис</a></li>
+                                <li><a href="">Синоптофор</a></li>
+                                <li><a href="">Визулон</a></li>
+                            </ol>
                         </nav>
-                        <section class="go-doctor">
+                        <button class="go-doctor">Записаться на приём</button>
+                        <!--<section class="go-doctor">
                             <h3>Запись на приём</h3>
                             <form action="">
                                 <div class="form-group">
@@ -168,10 +191,10 @@
                                 </div>
                                 <button type="submit" class="btn btn-danger">Записаться</button>
                             </form>
-                        </section>
-                    
+                        </section>-->
+
                     </aside>
-                   
+
                     <div class="thumb-box3 col-lg-7 col-md-9 col-sm-8 columns">
                         <div class="container column-level">
                             <div class="row">
@@ -344,6 +367,7 @@
         <!-- {%FOOTER_LINK} -->
     </footer>
     <div href="#" id="toTop" class="fa fa-arrow-circle-o-up" style=""></div>
+    <div style="width:100%; height:100%; background: red;"></div>
 </body>
 
 </html>
