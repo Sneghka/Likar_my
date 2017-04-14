@@ -302,7 +302,7 @@ nav {
     line-height: 61px;
 }
 
-.select-menu {
+/*.select-menu {
     display: none;
     padding: 4px 4px 4px 0;
     margin: 30px 0 0 0;
@@ -314,7 +314,7 @@ nav {
     height: 30px;
     font-size: 12px;
     vertical-align: middle;
-}
+}*/
 
 .main-menu {
     float: left;
@@ -1107,10 +1107,10 @@ header img {
     .main-menu {
         display: none;
     }
-    .select-menu {
+    /*.select-menu {
         display: inline-block;
         margin-top: 0;
-    }
+    }*/
     #search {
         float: none;
         display: block;

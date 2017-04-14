@@ -32,9 +32,8 @@
         <nav class="clearfix">
             <div class="nav-wrapper">
                 <div class="logo-wrapper">
-               <a href="index.html"><img src="img/logo_zir.png" alt="logo"></a>
-               </div>
-                <!--<div class="header-menu-wrapper">-->
+                    <a href="index.html"><img src="img/logo_zir.png" alt="logo"></a>
+                </div>
                 <ul class="main-menu clearfix sf-menu sf-js-enabled sf-arrows">
                     <li class="active"><a href="index.html">HOME</a>
                     </li>
@@ -43,11 +42,6 @@
                         <ul class="submenu sub-menu">
                             <li><a href="#">history</a></li>
                             <li><a href="news.html" class="sf-with-ul">news</a>
-                            <!--<span class="fa fa-angle-right"></span>-->
-                                <!--<ul class="submenu sub-menu">
-                                    <li><a href="#">latest</a></li>
-                                    <li><a href="#">archive</a></li>
-                                </ul>-->
                             </li>
                             <li><a href="#">testimonials</a></li>
                         </ul>
@@ -55,21 +49,19 @@
                     <li><a href="item.html">eye care</a></li>
                     <li><a href="">eyewear products</a></li>
                     <li><a href="">contacts</a></li>
-                </ul>
-                <select class="select-menu" onchange="location = this.value;">
-                    <option value="#">Navigate to...</option>
-                    <option value="index.html">Home</option>
-                    <option value="#">About us</option>
-                    <option value="#">––history</option>
-                    <option value="news.html">––news</option>
-                    <option value="#">–––latest</option>
-                    <option value="#">–––archive</option>
-                    <option value="#">––testimonials</option>
-                    <option value="item.html">eye care</option>
-                    <option value="#">Eyewear products</option>
-                    <option value="#">Contacts</option>
-                </select>
+                </ul>                
+                <div class="lang-wrapper">
+                    <input type="checkbox" id="language-button" />
+                    <label for="language-button">
+                        <i></i>
+                    </label>
+                </div>
                 <div class="form-wrapper">
+                    <button id="mobile-navbar-button" type="button" class="navbar-toggle">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
                     <form id="search" action="">
                         <input type="text" name="search">
                         <a href="#" onclick="document.getElementById('search').submit()">
@@ -77,10 +69,29 @@
                         </a>
                     </form>
                 </div>
-                <!--</div>-->
             </div>
         </nav>
     </header>
+
+    <nav class="mobile-nav-menu" role="navigation">
+        <div class="mobile-lang-wrapper">
+            <input type="checkbox" id="language-button-mobile" />
+            <label for="language-button-mobile" class="mobile">
+                        <i></i>
+                    </label>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">About us</a></li>
+            <li class="sub-menu"><a href="">history</a></li>
+            <li class="sub-menu"><a href="news.html">news</a></li>
+            <li class="sub-menu"><a href="">testimonials</a></li>
+            <li><a href="item.html">Eye care</a></li>
+            <li><a href="">Eyewear products</a></li>
+            <li><a href="">Contacts</a></li>
+        </ul>
+
+    </nav>
 
     <div class="content indent">
         <div class="breadcrumbs">
