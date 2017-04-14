@@ -67,6 +67,7 @@
                 $("#mobile-left-menu").removeClass("show");
                 $("#mobile-right-menu").removeClass("show");
                 $(".vertical-menu-tab").removeClass("hide");
+                $(".mobile-nav-menu").css("display", "none");
             }
 
         }
@@ -86,13 +87,10 @@
             };
         })(jQuery);
 
-        // **********Toggle language***********
-        // $(".lang-wrapper button").click(function () {
-        //     $(".lang-wrapper button").each(function () {
-        //         $(this).removeClass("active")
-        //     });
-        //     $(this).addClass("active");
-        // });
+        // **********Toggle mobile menu***********
+         $("#mobile-navbar-button").click(function () {
+                  $(".mobile-nav-menu").slideToggle("slow");
+        });
 
 
         // ******hide/show left mobile menu******

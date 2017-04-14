@@ -48,7 +48,7 @@
                     <li><a href="">eyewear products</a></li>
                     <li><a href="">contacts</a></li>
                 </ul>
-                <select class="select-menu" onchange="location = this.value;">
+                <!--<select class="select-menu" onchange="location = this.value;">
                     <option value="#">Navigate to...</option>
                     <option value="index.html">Home</option>
                     <option value="#">About us</option>
@@ -60,16 +60,19 @@
                     <option value="item.html">eye care</option>
                     <option value="#">Eyewear products</option>
                     <option value="#">Contacts</option>
-                </select>
+                </select>-->
                 <div class="lang-wrapper">
                     <input type="checkbox" id="language-button" />
-                    <label for="language-button"> <!-- class="attention" -->
-    <i></i>
-  </label>
-                    <!--<button class="active">RU</button>
-                    <button>UA</button>-->
+                    <label for="language-button">
+                        <i></i>
+                    </label>
                 </div>
                 <div class="form-wrapper">
+                    <button id="mobile-navbar-button" type="button" class="navbar-toggle">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
                     <form id="search" action="">
                         <input type="text" name="search">
                         <a href="#" onclick="document.getElementById('search').submit()">
@@ -77,11 +80,29 @@
                         </a>
                     </form>
                 </div>
-                <!--</div>-->
             </div>
         </nav>
     </header>
 
+    <nav class="mobile-nav-menu" role="navigation">
+        <div class="mobile-lang-wrapper">
+            <input type="checkbox" id="language-button-mobile" />
+            <label for="language-button-mobile" class="mobile">
+                        <i></i>
+                    </label>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">About us</a></li>
+            <li class="sub-menu"><a href="">history</a></li>
+            <li class="sub-menu"><a href="news.html">news</a></li>
+            <li class="sub-menu"><a href="">testimonials</a></li>
+            <li><a href="item.html">Eye care</a></li>
+            <li><a href="">Eyewear products</a></li>
+            <li><a href="">Contacts</a></li>
+        </ul>
+
+    </nav>
     <div class="slider">
         <div class="wrapper">
             <img src="img/picture1.jpg" alt="">
@@ -220,28 +241,6 @@
                             </li>
                         </ul>
                         <a href="#" class="btn-default btn4">View All Services</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="thumb-box4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 col-md-6 col-sm-6 wow fadeInUp">
-                        <h4><img src="img/title_icon1.png" alt="">Our Mission</h4>
-                        <h5>Quis autem vel eum iure reprehenderit.</h5>
-                        <p>Dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit.</p>
-                        <a href="#" class="btn-default btn1">more <i></i></a>
-                    </div>
-                    <div class="col-lg-5 col-md-6 col-sm-6 col-lg-offset-1 wow fadeInUp" data-wow-delay="0.1s">
-                        <h4><img src="img/title_icon2.png" alt="">consultation</h4>
-                        <h5>Ut enim ad minim veniam.</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                            ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-                        <a href="#" class="btn-default btn1">more <i></i></a>
                     </div>
                 </div>
             </div>

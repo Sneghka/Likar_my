@@ -111,6 +111,11 @@
 .item-news ul {
     margin-top: 20px;
 }
+
+.news .column-level.video {
+    clear: both;
+    margin-bottom: 40px;
+}
 @media (min-width:1700px){
     .container{
         width: 1400px;
