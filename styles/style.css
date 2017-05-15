@@ -25,7 +25,7 @@ body {
 }
 
 .lang-wrapper label,
- .mobile-lang-wrapper label{
+.mobile-lang-wrapper label {
     width: 60px;
     height: 25px;
     display: inline-block;
@@ -267,6 +267,53 @@ p {
 
 
 /*=========================================================================================
+                               POPUP GO DOCTOR
+=========================================================================================*/
+
+.popup-doctor {
+    z-index: 10000;
+}
+
+.popup-doctor-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: grey;
+    opacity: 0.5;
+    z-index: 10000;
+}
+
+section.go-doctor {
+    width: 350px;
+    background: #fbe2e2;
+    margin-top: 40px;
+    text-align: center;
+    position: fixed;
+    z-index: 11000;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 100px;
+    left: 50%;
+    font-size: 16px;
+    padding: 30px 20px;
+}
+
+#close-popup-go-doctor {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 5px;
+    right: 5px;
+    color: #fff;
+    background: #ff0000;
+}
+
+#close-popup-go-doctor:hover {
+    cursor: pointer;
+}
+
+
+/*=========================================================================================
                                 HEADER
 =========================================================================================*/
 
@@ -302,19 +349,6 @@ nav {
     line-height: 61px;
 }
 
-/*.select-menu {
-    display: none;
-    padding: 4px 4px 4px 0;
-    margin: 30px 0 0 0;
-    width: 100%;
-    border: 1px solid #f2f4f6;
-    background: #f2f4f6;
-    color: #8c8c8c;
-    cursor: pointer;
-    height: 30px;
-    font-size: 12px;
-    vertical-align: middle;
-}*/
 
 .main-menu {
     float: left;
@@ -330,6 +364,21 @@ nav {
     margin: 0 0 0 46px;
     float: left;
     line-height: 61px;
+}
+
+.main-menu li.go-doctor {
+    padding: 0;
+    background: none;
+}
+
+.main-menu li.go-doctor button {
+    font: 20px 'Roboto Condensed';
+    color: #ffffff;
+    text-transform: uppercase;
+    background: none;
+    padding: 0;
+    border: none;
+    box-shadow: none;
 }
 
 .main-menu li a {
@@ -477,7 +526,6 @@ div.nav-wrapper .sub-menu>ul li>ul li a:hover {
     color: #53afee;
     background: none;
 }
-
 
 .navbar-toggle .icon-bar {
     display: block;
@@ -976,41 +1024,75 @@ footer p {
     background: url(../img/top.png) 0 top no-repeat;
 }
 
+
 /******************MOBILE*************************/
-#mobile-navbar-button{
+
+#mobile-navbar-button {
     display: none;
     margin-top: 0;
-   border-color: #3b719a; 
-   float: none;
-  box-shadow: inset 0 2px 3px 0 rgba(239, 235, 235, 1), inset 0 -2px 0 0 rgba(40, 79, 107, 1);
+    border-color: #3b719a;
+    float: none;
+    box-shadow: inset 0 2px 3px 0 rgba(239, 235, 235, 1), inset 0 -2px 0 0 rgba(40, 79, 107, 1);
 }
+
 .mobile-nav-menu {
     display: none;
     opacity: 0.8;
-    width: 100%;  
+    width: 100%;
     text-align: left;
     padding-left: 30px;
     position: relative;
     z-index: 12000;
     border-top: 1px solid #4183b3;
 }
+
 .mobile-nav-menu ul {
     list-style: none;
 }
+
 .mobile-nav-menu ul li {
     margin-bottom: 10px;
 }
+
 .mobile-nav-menu ul li.sub-menu {
     text-indent: 20px;
 }
-.mobile-nav-menu a {
+
+.mobile-nav-menu li.go-doctor {
+    background: none;
+    padding: 0;
+}
+.mobile-nav-menu button {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+.mobile-nav-menu a, .mobile-nav-menu button {
     color: #fff;
-    font-size: 20px;  
+    font-size: 20px;
+}
+section.go-doctor {
+    z-index: 20000;
 }
 
 
 /*MEDIA
 =======================================================================*/
+
+@media only screen and (max-width: 1530px) {
+    .main-menu li a, .main-menu li.go-doctor button  {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 1460px) {
+    .main-menu li {
+        margin-left: 30px;
+    }
+    .main-menu li a, .main-menu li.go-doctor button {
+        font-size: 16px;
+    }
+}
 
 @media only screen and (max-width: 1280px) {
     .main-menu li {
@@ -1018,7 +1100,7 @@ footer p {
     }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1300px) {
     .logo-wrapper,
     header img,
     .main-menu,
@@ -1038,6 +1120,9 @@ footer p {
     .main-menu {
         top: 0;
     }
+    .main-menu li a, .main-menu li.go-doctor button {
+        font-size: 20px;
+    }
     #search {
         margin-bottom: 0;
         top: 0;
@@ -1051,7 +1136,7 @@ footer p {
         padding: 2% 0 2% 0;
     }
     .nav-wrapper {
-        width: 750px;
+        width: 950px;
         margin: 0 auto;
     }
     #search a {
@@ -1061,12 +1146,12 @@ footer p {
     .main-menu li {
         line-height: 1;
     }
-    .lang-wrapper, .mobile-lang-wrapper {
-    right: 20px;}
-
+    .lang-wrapper,
+    .mobile-lang-wrapper {
+        right: 20px;
+    }
     .lang-wrapper input[type=checkbox]:checked~label:before,
-    .mobile-lang-wrapper input[type=checkbox]:checked~label:before
-     {
+    .mobile-lang-wrapper input[type=checkbox]:checked~label:before {
         margin-left: -20px;
     }
     .lang-wrapper label:before,
@@ -1084,6 +1169,15 @@ footer p {
     }
 }
 
+@media only screen and (max-width: 950px) {
+    .nav-wrapper {
+        width: 750px;
+    }
+    .main-menu li a, .main-menu li.go-doctor button {
+        font-size: 16px;
+    }
+}
+
 @media (max-width: 991px) and (min-width: 768px) {
     .thumb-box3 .col-lg-4 {
         margin-bottom: 50px;
@@ -1091,19 +1185,19 @@ footer p {
 }
 
 @media only screen and (max-width: 767px) {
-
-header img {
-    margin-bottom: 0px;
-}
-.lang-wrapper {
-    display: none;
-}
-    #mobile-navbar-button, form#search{
-    display: inline-block;
-}
-.mobile-nav-menu {    
-    position: absolute;
-}
+    header img {
+        margin-bottom: 0px;
+    }
+    .lang-wrapper {
+        display: none;
+    }
+    #mobile-navbar-button,
+    form#search {
+        display: inline-block;
+    }
+    .mobile-nav-menu {
+        position: absolute;
+    }
     .main-menu {
         display: none;
     }
@@ -1128,7 +1222,7 @@ header img {
     }
     #search a {
         top: 7px;
-    }    
+    }
     footer {
         text-align: center;
         padding: 40px 0 0 0;
@@ -1153,7 +1247,7 @@ header img {
     .lang-wrapper {
         right: 5px;
     }
-     .mobile-lang-wrapper {
+    .mobile-lang-wrapper {
         right: 15px;
     }
     .col-xs-6 {

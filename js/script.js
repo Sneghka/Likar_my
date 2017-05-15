@@ -125,6 +125,13 @@
    $("button.go-doctor").click(function () {
             $(".popup-doctor").removeClass("hide");      
         });
+         $("li.go-doctor").click(function () {
+            $(".popup-doctor").removeClass("hide");      
+        });
+       /* $(".go-doctor").click(function () {
+            $(".popup-doctor").removeClass("hide");      
+        });*/
+
 
         /***News html - make all images the same height****/
         var maxHeight = -1;

@@ -276,7 +276,7 @@ section.go-doctor {
     background: #fbe2e2;
     text-align: center;
     position: fixed;
-    z-index: 11000;
+    z-index: 20000;
      -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
         top: 100px;
@@ -291,6 +291,9 @@ section.go-doctor {
     color: #fff;
     background: #ff0000;
 
+}
+#close-popup-go-doctor:hover{
+cursor: pointer;
 }
 
 /***********MOBILE*********************/
@@ -338,7 +341,7 @@ section.go-doctor {
 }
 
 @media (max-width: 767px) {
-    .go-doctor {
+  .content.item .go-doctor {
         display: none;
     }
     .content.item div.thumb-box3 {
@@ -376,7 +379,7 @@ section.go-doctor {
     .mobile.right-menu {
         background: #fbe2e2;
         position: fixed;
-        width: 80%;
+        width:300px;
         max-height: 100%;
         overflow-y: scroll;
         margin: 0 auto;

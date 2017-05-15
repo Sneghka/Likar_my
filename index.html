@@ -47,6 +47,7 @@
                     <li><a href="item.html">eye care</a></li>
                     <li><a href="">eyewear products</a></li>
                     <li><a href="">contacts</a></li>
+                    <li class="go-doctor"><button>Book an appointment</button></li>
                 </ul>                
                 <div class="lang-wrapper">
                     <input type="checkbox" id="language-button" />
@@ -71,6 +72,30 @@
         </nav>
     </header>
 
+
+    <div class="popup-doctor hide">
+        <div class="popup-doctor-background "></div>
+        <section class="go-doctor">
+            <div id="close-popup-go-doctor">&#x274C</div>
+            <h3>Запись на приём</h3>
+            <form action="">
+                <div class="form-group">
+                    <label for="username">Ваше имя:</label>
+                    <input type="text" class="form-control" id="username">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон:</label>
+                    <input type="text" class="form-control" id="phone">
+                </div>
+                <button type="submit" class="btn btn-danger">Записаться</button>
+            </form>
+        </section>
+    </div>
+
     <nav class="mobile-nav-menu" role="navigation">
         <div class="mobile-lang-wrapper">
             <input type="checkbox" id="language-button-mobile" />
@@ -87,6 +112,7 @@
             <li><a href="item.html">Eye care</a></li>
             <li><a href="">Eyewear products</a></li>
             <li><a href="">Contacts</a></li>
+            <li class="go-doctor"><button>Book an appointment</button></li>
         </ul>
 
     </nav>
