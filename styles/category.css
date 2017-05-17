@@ -1,0 +1,8 @@
+
+.category .thumbnail figure {
+    float: none;
+    margin-bottom: 40px;
+}
+.category .thumbnail figure img{
+    width: 100%;
+}
