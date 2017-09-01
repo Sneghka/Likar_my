@@ -312,9 +312,14 @@
             </div>
         </div>
     </div>
-    <div class="content_map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2538.2953800598384!2d30.47401369646287!3d50.49146005957534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cdf28f5e3beb%3A0x72e72d5c755a177c!2z0JrRg9GA0LXQvdGW0LLRgdGM0LrQuNC5INC_0YDQvtCy0YPQu9C-0LosIDQvOCwg0JrQuNGX0LI!5e0!3m2!1sru!2sua!4v1470144857219"
-            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+   <div class="content_map">        
+        <div class="map">
+            <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:440px;width:100%;'><div id='gmap_canvas' style='height:440px;width:100%;'></div><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com</a></small></div><div><small><a href="http://www.genkigirl.net/get-genki-girl-blog/">alternative to airbnb website</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(50.384046,30.381863),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(50.384046,30.381863)});infowindow = new google.maps.InfoWindow({content:'<strong>Любое название тут</strong><br>Київ, м. Вишневе, вул. Молодіжна 11а<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});google.maps.event.addDomListener(window, "resize", function() {  
+   var center = map.getCenter();
+   google.maps.event.trigger(map, "resize");
+   map.setCenter({lat: 50.384046, lng: 30.381863}); 
+});;infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+        </div>    
     </div>
     <footer>
         <div class="container">
